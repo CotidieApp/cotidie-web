@@ -8,6 +8,28 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 17:36] 5. Etiqueta limpia de descarga APK
+
+**Planificacion:**
+
+- Simplificar el texto del boton principal de descarga.
+- Mantener intacto el enlace directo al archivo estable de Drive.
+
+**Ejecucion:**
+
+- La accion `Descargar APK actual` se renombro a `Descargar APK`.
+- No se modificaron la URL, el archivo entregado ni la automatizacion de `cotidie-latest.apk`.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- GitHub Pages publico correctamente la actualizacion.
+
+**Archivos Modificados:**
+
+- `app/instalar/page.tsx`
+- `AGENTS.md`
+
 ### [2026-07-12 17:27] 4. Descarga directa del APK estable desde Drive
 
 **Planificacion:**
