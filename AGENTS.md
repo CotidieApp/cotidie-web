@@ -8,6 +8,33 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 18:15] 6. Descarga APK migrada a GitHub Releases
+
+**Planificacion:**
+
+- Eliminar la pantalla de advertencia obligatoria de Google Drive.
+- Mantener una URL permanente que apunte a la release mas reciente.
+- Coordinar la web con la nueva publicacion automatica de `android:apk`.
+
+**Ejecucion:**
+
+- `APK_DOWNLOAD_URL` ahora usa `CotidieApp/cotidie-web/releases/latest/download/cotidie-latest.apk`.
+- La release inicial `v6.4.0` contiene el APK oficial bajo el nombre estable `cotidie-latest.apk`.
+- Los botones de la cabecera y de la pagina Instalar conservan el mismo comportamiento de descarga directa.
+
+**Validacion:**
+
+- El enlace permanente respondio HTTP 200 despues de sus redirecciones.
+- GitHub entrego `Content-Disposition: attachment; filename=cotidie-latest.apk`.
+- El asset publicado midio 135569856 bytes y conservo el SHA-256 del APK 6.4.0.
+- `npm.cmd run build:pages` OK.
+- GitHub Pages publico correctamente la actualizacion.
+
+**Archivos Modificados:**
+
+- `app/lib/links.ts`
+- `AGENTS.md`
+
 ### [2026-07-12 17:36] 5. Etiqueta limpia de descarga APK
 
 **Planificacion:**
