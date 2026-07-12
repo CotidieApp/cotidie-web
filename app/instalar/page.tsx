@@ -38,6 +38,7 @@ export default function InstalarPage() {
           <a className="button button-secondary full" href={PWA_URL}>Abrir Cotidie en Safari</a>
         </article>
       </section>
+      <p className="install-guide-link"><a href="/cotidie-web/guia/">¿Quieres ver los pasos de instalación y cómo funcionan las actualizaciones? <span>Ver guía</span></a></p>
       <SiteFooter />
     </main>
   );

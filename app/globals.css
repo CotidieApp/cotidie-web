@@ -195,6 +195,30 @@ footer > div { margin-left: auto; display: flex; gap: 24px; }
 
 .standalone-install { width: min(1140px, calc(100% - 48px)); margin: 0 auto 85px; }
 .install-card h2 { color: var(--navy); font-size: 1.35rem; margin-bottom: 14px; }
+.install-guide-link { width: min(760px, calc(100% - 48px)); margin: -49px auto 75px; text-align: center; color: var(--ink-soft); font-size: .83rem; line-height: 1.6; }
+.install-guide-link a { display: inline-block; padding: 14px 18px; border-radius: 12px; background: rgba(237,243,250,.72); }
+.install-guide-link span { color: var(--gold-deep); font-family: "Comfortaa", sans-serif; font-size: .72rem; font-weight: 700; }
+.guide-section, .version-section { width: min(1140px, calc(100% - 48px)); margin: 0 auto; padding: 30px 0 92px; }
+.guide-section-heading { max-width: 710px; margin-bottom: 42px; }
+.guide-section-heading.centered { margin: 0 auto 42px; text-align: center; }
+.guide-section-heading h2 { margin: 14px 0 17px; color: var(--navy); font-size: clamp(2.1rem, 3.4vw, 3.25rem); line-height: 1.12; letter-spacing: -.045em; font-weight: 520; }
+.guide-section-heading > p:last-child { color: var(--ink-soft); font-size: .98rem; line-height: 1.75; }
+.guide-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.guide-method { position: relative; min-height: 470px; display: flex; flex-direction: column; padding: 31px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.76); }
+.guide-method.recommended { border: 1.5px solid rgba(213,138,11,.55); background: #fff; box-shadow: 0 20px 42px rgba(15,49,93,.08); }
+.guide-method h2 { margin: 0 0 14px; color: var(--navy); font-size: 1.32rem; }
+.guide-method ol { margin: 8px 0 28px; padding-left: 20px; color: var(--ink-soft); font-size: .83rem; line-height: 1.75; }
+.guide-method .button { margin-top: auto; }
+.version-section { padding-top: 72px; border-top: 1px solid var(--line); }
+.version-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.version-grid article { min-height: 230px; padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.63); }
+.version-number { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--gold-pale); color: var(--gold-deep); font: 700 .85rem "Comfortaa", sans-serif; }
+.version-grid h3 { margin: 42px 0 10px; color: var(--navy); font-size: 1.15rem; }
+.version-grid p { margin: 0; color: var(--ink-soft); font-size: .84rem; line-height: 1.68; }
+.update-notice { width: min(860px, 100%); margin: 45px auto 0; padding: 24px 27px; display: grid; grid-template-columns: auto 1fr; gap: 17px; border: 1px solid rgba(213,138,11,.28); border-radius: 16px; background: #fffaf0; }
+.update-notice > span { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--gold); color: #fff; font: 700 .9rem "Comfortaa", sans-serif; }
+.update-notice h2 { margin: 1px 0 8px; color: var(--navy); font-size: 1.02rem; }
+.update-notice p { margin: 0; color: var(--ink-soft); font-size: .83rem; line-height: 1.7; }
 .standalone-faq { width: min(860px, calc(100% - 48px)); margin: 0 auto 55px; }
 .question-cta { width: min(860px, calc(100% - 48px)); margin: 0 auto 80px; padding: 35px 40px; display: flex; align-items: center; gap: 22px; border-radius: 17px; background: var(--navy); color: #fff; }
 .question-cta h2 { margin: 0; font-size: 1.4rem; }
@@ -252,6 +276,15 @@ footer > div { margin-left: auto; display: flex; gap: 24px; }
   .screenshot-gallery article { scroll-snap-align: center; }
   .standalone-install { width: calc(100% - 32px); max-width: none; grid-template-columns: repeat(3, minmax(300px, 84vw)); overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; padding: 14px 4px 18px; margin-bottom: 58px; scrollbar-width: thin; scrollbar-color: var(--gold-pale) transparent; }
   .standalone-install .install-card { scroll-snap-align: center; }
+  .install-guide-link { width: calc(100% - 32px); margin: -25px auto 54px; }
+  .guide-section, .version-section { width: calc(100% - 32px); padding-bottom: 68px; }
+  .guide-methods { grid-template-columns: repeat(3, minmax(300px, 84vw)); overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; padding: 14px 4px 18px; scrollbar-width: thin; scrollbar-color: var(--gold-pale) transparent; }
+  .guide-method { min-height: 458px; scroll-snap-align: center; padding: 28px 24px; }
+  .version-section { padding-top: 58px; }
+  .version-grid { grid-template-columns: 1fr; gap: 12px; }
+  .version-grid article { min-height: 0; padding: 24px; }
+  .version-grid h3 { margin-top: 21px; }
+  .update-notice { padding: 22px; gap: 14px; }
   .standalone-faq { width: calc(100% - 32px); }
   .question-cta { width: calc(100% - 32px); flex-direction: column; text-align: center; }
   .question-cta p { margin: 0; }

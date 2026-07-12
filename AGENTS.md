@@ -8,6 +8,35 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 19:40] 12. Guia de instalacion y actualizaciones
+
+**Planificacion:**
+
+- Incorporar el contenido de los documentos de instalacion y versionado sin reproducirlos literalmente ni romper la navegacion compacta del sitio.
+- Mantener las instrucciones completas en una pagina independiente para evitar alargar la pagina de descarga.
+
+**Ejecucion:**
+
+- Se creo la ruta `Guía`, enlazada desde la navegacion, el pie y la pagina de instalacion.
+- La guia explica el flujo APK de Android, la instalacion desde navegador en Android y la opcion oficial desde Safari en iPhone y iPad.
+- Se adapto la explicacion de versionado `vX.Y.Z` para distinguir cambios Major, Minor y Patch.
+- Se agrego una indicacion prudente para respaldar, desinstalar y volver a instalar el APK oficial cuando Android rechace una actualizacion por conflicto entre versiones o por una advertencia de origen.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La exportacion contiene `/guia/`, los iconos de ambas plataformas, el acceso al APK y las tres partes del versionado.
+- Inicio, Funciones, Instalar, Guía y Preguntas incluyen el nuevo enlace de navegacion.
+- `git diff --check` OK; solo se mostraron los avisos esperados de finales de linea CRLF de Windows.
+
+**Archivos Modificados:**
+
+- `app/guia/page.tsx`
+- `app/components/SiteChrome.tsx`
+- `app/instalar/page.tsx`
+- `app/globals.css`
+- `AGENTS.md`
+
 ### [2026-07-12 19:30] 10. Guias visuales para los tres accesos de Cotidie
 
 **Planificacion:**

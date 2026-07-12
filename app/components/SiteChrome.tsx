@@ -2,13 +2,14 @@ import { APK_DOWNLOAD_URL } from "../lib/links";
 
 const BASE = "/cotidie-web";
 
-type ActivePage = "inicio" | "funciones" | "instalar" | "preguntas";
+type ActivePage = "inicio" | "funciones" | "instalar" | "guia" | "preguntas";
 
 export function SiteHeader({ active }: { active: ActivePage }) {
   const links: Array<{ key: ActivePage; href: string; label: string }> = [
     { key: "inicio", href: `${BASE}/`, label: "Inicio" },
     { key: "funciones", href: `${BASE}/funciones/`, label: "Funciones" },
     { key: "instalar", href: `${BASE}/instalar/`, label: "Instalar" },
+    { key: "guia", href: `${BASE}/guia/`, label: "Guía" },
     { key: "preguntas", href: `${BASE}/preguntas/`, label: "Preguntas" },
   ];
 
@@ -47,7 +48,7 @@ export function SiteFooter() {
         <span>Cotidie</span>
       </a>
       <p>Oración y vida espiritual, todos los días.</p>
-      <div><a href={`${BASE}/funciones/`}>Funciones</a><a href={`${BASE}/instalar/`}>Instalación</a><a href={`${BASE}/preguntas/`}>Preguntas</a></div>
+      <div><a href={`${BASE}/funciones/`}>Funciones</a><a href={`${BASE}/instalar/`}>Instalación</a><a href={`${BASE}/guia/`}>Guía</a><a href={`${BASE}/preguntas/`}>Preguntas</a></div>
     </footer>
   );
 }
