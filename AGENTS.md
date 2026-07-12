@@ -8,6 +8,46 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 17:12] 3. Navegacion por paginas y capturas reemplazables
+
+**Planificacion:**
+
+- Dividir la landing extensa en paginas breves con navegacion persistente.
+- Conservar la identidad visual ya aprobada y los mismos metodos de instalacion.
+- Permitir que el usuario cambie las capturas sin editar codigo.
+
+**Ejecucion:**
+
+- **Paginas**: la web se separo en Inicio, Funciones, Instalar y Preguntas frecuentes.
+- **Navegacion**: una cabecera y pie compartidos conectan las cuatro rutas y marcan la pagina activa.
+- **Capturas**: Inicio usa `inicio.png`; Funciones usa `oraciones.png`, `plan-de-vida.png` y `biblioteca.png`.
+- **Reemplazo simple**: los cuatro PNG viven en `public/screenshots` y pueden sustituirse conservando sus nombres.
+- **Guia**: `CAPTURAS.md` explica la carpeta exacta, el contenido sugerido y el formato recomendado para cada imagen.
+- **Publicacion**: GitHub Pages mantiene todas las rutas y publica automaticamente al actualizar `main`.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La exportacion estatica genero las cuatro rutas con sus recursos bajo `/cotidie-web`.
+- GitHub Actions publico correctamente la actualizacion en GitHub Pages.
+
+**Archivos Modificados:**
+
+- `app/page.tsx`
+- `app/components/SiteChrome.tsx`
+- `app/components/ScreenshotFrame.tsx`
+- `app/funciones/page.tsx`
+- `app/instalar/page.tsx`
+- `app/preguntas/page.tsx`
+- `app/globals.css`
+- `public/screenshots/inicio.png`
+- `public/screenshots/oraciones.png`
+- `public/screenshots/plan-de-vida.png`
+- `public/screenshots/biblioteca.png`
+- `public/screenshots/README.md`
+- `CAPTURAS.md`
+- `AGENTS.md`
+
 ### [2026-07-12 16:58] 2. Repositorio independiente y publicacion con GitHub Pages
 
 **Planificacion:**

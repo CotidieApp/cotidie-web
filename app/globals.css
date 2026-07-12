@@ -44,6 +44,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand img { border-radius: 13px; box-shadow: 0 7px 18px rgba(15,49,93,.13); }
 .site-header nav { display: flex; gap: 30px; margin-left: auto; font-size: .82rem; color: var(--ink-soft); }
 .site-header nav a:hover { color: var(--gold-deep); }
+.site-header nav a.active { color: var(--gold-deep); font-weight: 700; }
 .header-action { border: 1px solid var(--line); background: rgba(255,255,255,.72); padding: 12px 18px; border-radius: 10px; font-size: .75rem; font-weight: 700; }
 
 .hero { min-height: 710px; overflow: hidden; display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: 70px; width: min(1220px, calc(100% - 48px)); margin: 0 auto; padding: 50px 0 86px; }
@@ -80,6 +81,7 @@ h1 em { color: var(--gold-deep); font-weight: 520; }
 .screen-placeholder span { color: var(--gold-deep); font: 700 .62rem "Comfortaa", sans-serif; text-transform: uppercase; letter-spacing: .1em; }
 .screen-placeholder strong { font-size: 1.25rem; margin: 8px 0; }
 .screen-placeholder small { color: var(--ink-soft); line-height: 1.5; }
+.app-screenshot { width: 100%; height: 100%; display: block; border-radius: 29px; object-fit: cover; object-position: top center; background: var(--sky); }
 .floating-note { position: absolute; z-index: 3; background: rgba(255,255,255,.94); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 38px rgba(15,49,93,.13); padding: 15px 17px; font-family: "Comfortaa", sans-serif; }
 .floating-note span { color: var(--gold-deep); font-size: .62rem; font-weight: 700; }
 .floating-note strong, .floating-note small { display: block; }
@@ -156,6 +158,40 @@ footer { min-height: 120px; padding: 30px max(24px, calc((100% - 1140px) / 2)); 
 footer p { margin: 0; }
 footer > div { margin-left: auto; display: flex; gap: 24px; }
 
+.home-links { width: min(1140px, calc(100% - 48px)); margin: -38px auto 70px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; position: relative; z-index: 5; }
+.home-links a { min-height: 130px; display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-content: center; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.9); box-shadow: 0 16px 34px rgba(15,49,93,.07); transition: transform .2s ease; }
+.home-links a:hover { transform: translateY(-4px); }
+.home-links span { grid-row: 1 / 3; color: var(--gold-deep); font: 700 .62rem "Comfortaa", sans-serif; padding-top: 3px; }
+.home-links strong { color: var(--navy); font-size: 1rem; }
+.home-links small { color: var(--ink-soft); margin-top: 7px; line-height: 1.45; }
+
+.page-hero { width: min(980px, calc(100% - 48px)); margin: 0 auto; text-align: center; }
+.compact-page-hero { padding: 72px 0 55px; }
+.compact-page-hero h1 { max-width: 850px; margin: 15px auto 18px; color: var(--navy); font-size: clamp(2.45rem, 4.6vw, 4.25rem); }
+.compact-page-hero > p:last-child { max-width: 690px; margin: 0 auto; color: var(--ink-soft); font-size: 1rem; line-height: 1.7; }
+.short-grid { width: min(1140px, calc(100% - 48px)); margin: 0 auto 62px; grid-template-columns: repeat(4, 1fr); }
+.short-card { min-height: 220px; }
+.short-card h2 { margin: 46px 0 12px; color: var(--navy); font-size: 1.05rem; }
+.short-card p { color: var(--ink-soft); font-size: .82rem; line-height: 1.65; }
+
+.screenshot-gallery { width: min(960px, calc(100% - 48px)); margin: 0 auto 90px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
+.screenshot-gallery article { text-align: center; display: grid; justify-items: center; }
+.screenshot-gallery .phone-shell { width: 166px; height: 342px; border-radius: 27px; padding: 7px; }
+.screenshot-gallery .phone-speaker { width: 52px; height: 12px; left: calc(50% - 26px); top: 6px; }
+.screenshot-gallery .app-screenshot { border-radius: 21px; }
+.screenshot-gallery article > div:last-child { margin-top: 17px; }
+.screenshot-gallery strong, .screenshot-gallery span { display: block; }
+.screenshot-gallery strong { color: var(--navy); }
+.screenshot-gallery span { color: var(--ink-soft); font-size: .75rem; margin-top: 6px; }
+
+.standalone-install { width: min(1140px, calc(100% - 48px)); margin: 0 auto 85px; }
+.install-card h2 { color: var(--navy); font-size: 1.35rem; margin-bottom: 14px; }
+.standalone-faq { width: min(860px, calc(100% - 48px)); margin: 0 auto 55px; }
+.question-cta { width: min(860px, calc(100% - 48px)); margin: 0 auto 80px; padding: 35px 40px; display: flex; align-items: center; gap: 22px; border-radius: 17px; background: var(--navy); color: #fff; }
+.question-cta h2 { margin: 0; font-size: 1.4rem; }
+.question-cta p { margin: 0 auto 0 0; color: rgba(255,255,255,.7); font-size: .83rem; }
+.question-cta .button { min-height: 48px; white-space: nowrap; }
+
 @media (max-width: 980px) {
   .site-header nav { display: none; }
   .hero { grid-template-columns: 1fr; text-align: center; padding-top: 80px; }
@@ -167,6 +203,9 @@ footer > div { margin-left: auto; display: flex; gap: 24px; }
   .showcase-shot, .showcase-reverse .showcase-shot { order: 1; min-height: 620px; }
   .showcase-copy, .showcase-reverse .showcase-copy { order: 2; padding: 80px 48px; }
   .install-grid { grid-template-columns: 1fr; max-width: 620px; margin: auto; }
+  .home-links { grid-template-columns: 1fr; margin-top: 0; }
+  .short-grid { grid-template-columns: 1fr 1fr; }
+  .screenshot-gallery { gap: 22px; }
 }
 
 @media (max-width: 620px) {
@@ -193,6 +232,15 @@ footer > div { margin-left: auto; display: flex; gap: 24px; }
   .web-access-note { grid-template-columns: 1fr; gap: 8px; }
   footer { flex-direction: column; text-align: center; padding: 42px 24px; }
   footer > div { margin-left: 0; flex-wrap: wrap; justify-content: center; }
+  .home-links { width: calc(100% - 32px); }
+  .compact-page-hero { width: calc(100% - 32px); padding: 55px 0 42px; }
+  .short-grid { width: calc(100% - 32px); grid-template-columns: 1fr; }
+  .short-card { min-height: 190px; }
+  .screenshot-gallery { width: calc(100% - 32px); grid-template-columns: 1fr; }
+  .standalone-install { width: calc(100% - 32px); }
+  .standalone-faq { width: calc(100% - 32px); }
+  .question-cta { width: calc(100% - 32px); flex-direction: column; text-align: center; }
+  .question-cta p { margin: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
