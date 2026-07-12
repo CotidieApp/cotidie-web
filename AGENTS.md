@@ -8,6 +8,34 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 17:27] 4. Descarga directa del APK estable desde Drive
+
+**Planificacion:**
+
+- Conectar la instalacion Android de la web con el archivo estable `cotidie-latest.apk`.
+- Evitar abrir la vista previa o la pagina compartida de Google Drive.
+- Mantener un unico enlace reutilizable en todos los accesos de descarga.
+
+**Ejecucion:**
+
+- **Enlace directo**: `links.ts` centraliza la URL `drive.usercontent.google.com` del archivo compartido.
+- **Descarga**: la respuesta de Drive entrega `application/octet-stream` con `Content-Disposition: attachment` y el nombre `cotidie-latest.apk`.
+- **Interfaz**: el boton principal de la pagina Instalar y la accion de la cabecera descargan el APK sin abrir la vista previa de Drive.
+
+**Validacion:**
+
+- La URL directa respondio HTTP 200.
+- Drive informo `Content-Length: 135569856` y `Content-Disposition: attachment; filename="cotidie-latest.apk"`.
+- `npm.cmd run build:pages` OK.
+- GitHub Pages publico correctamente la actualizacion.
+
+**Archivos Modificados:**
+
+- `app/lib/links.ts`
+- `app/components/SiteChrome.tsx`
+- `app/instalar/page.tsx`
+- `AGENTS.md`
+
 ### [2026-07-12 17:12] 3. Navegacion por paginas y capturas reemplazables
 
 **Planificacion:**

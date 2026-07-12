@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { APK_DOWNLOAD_URL } from "../lib/links";
 
 export const metadata: Metadata = { title: "Instalar — Cotidie" };
 
@@ -19,7 +20,7 @@ export default function InstalarPage() {
           <p className="platform">Android</p><h2>Instalar mediante APK</h2>
           <p>La aplicación completa, con acceso directo y mejor integración con tu teléfono.</p>
           <ul><li>Archivo oficial</li><li>Uso sin conexión</li><li>Funciones nativas</li></ul>
-          <span className="button button-primary full pending-download">Enlace de descarga por conectar</span>
+          <a className="button button-primary full" href={APK_DOWNLOAD_URL}>Descargar APK actual</a>
           <small className="file-note">Android puede pedir permiso para instalar desde tu navegador.</small>
         </article>
         <article className="install-card">
