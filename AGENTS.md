@@ -36,6 +36,36 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - `public/guides/ios-safari.png`
 - `AGENTS.md`
 
+### [2026-07-12 19:38] 11. Iconos de plataforma en los accesos
+
+**Planificacion:**
+
+- Retirar las ilustraciones de guia para conservar una pagina de instalacion mas sobria.
+- Identificar cada metodo unicamente con el icono reconocible de su plataforma.
+
+**Ejecucion:**
+
+- Se eliminaron las tres ilustraciones de guia incorporadas en la intervencion anterior.
+- Las dos alternativas de Android ahora usan el icono oficial del robot Android.
+- El metodo de iOS ahora usa el icono oficial de Apple, dentro del mismo contenedor visual de los demas metodos.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La pagina estatica de instalacion referencia los iconos Android y Apple, sin conservar referencias a la carpeta de guias retirada.
+- `git diff --check` OK; solo se mostraron los avisos esperados de finales de linea CRLF de Windows.
+
+**Archivos Modificados:**
+
+- `app/instalar/page.tsx`
+- `app/globals.css`
+- `public/brand/android.svg`
+- `public/brand/apple.svg`
+- `public/guides/android-apk-install.png` (eliminado)
+- `public/guides/android-web.png` (eliminado)
+- `public/guides/ios-safari.png` (eliminado)
+- `AGENTS.md`
+
 ### [2026-07-12 19:08] 9. Experiencia movil compacta con navegacion y carruseles
 
 **Planificacion:**

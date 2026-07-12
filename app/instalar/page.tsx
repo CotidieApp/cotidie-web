@@ -16,8 +16,7 @@ export default function InstalarPage() {
       <section className="install-grid standalone-install">
         <article className="install-card recommended" id="descarga-apk">
           <div className="recommendation">Recomendado</div>
-          <div className="platform-icon android" aria-hidden="true">A</div>
-          <img className="install-guide" src="/cotidie-web/guides/android-apk-install.png" alt="Guía visual para descargar e instalar Cotidie mediante APK en Android" />
+          <div className="platform-icon android" aria-hidden="true"><img src="/cotidie-web/brand/android.svg" alt="" /></div>
           <p className="platform">Android</p><h2>Instalar mediante APK</h2>
           <p>La aplicación completa, con acceso directo y mejor integración con tu teléfono.</p>
           <ul><li>Archivo oficial</li><li>Uso sin conexión</li><li>Funciones nativas</li></ul>
@@ -25,16 +24,14 @@ export default function InstalarPage() {
           <small className="file-note">Android puede pedir permiso para instalar desde tu navegador.</small>
         </article>
         <article className="install-card">
-          <div className="platform-icon web" aria-hidden="true">◎</div>
-          <img className="install-guide" src="/cotidie-web/guides/android-web.png" alt="Guía visual para abrir la versión web de Cotidie en Android" />
+          <div className="platform-icon web" aria-hidden="true"><img src="/cotidie-web/brand/android.svg" alt="" /></div>
           <p className="platform">Android · alternativa</p><h2>Usar la versión web</h2>
           <p>Accede a Cotidie sin descargar el APK ni instalar archivos en el teléfono.</p>
           <ul><li>Sin instalación local</li><li>Se abre en el navegador</li><li>Acceso rápido</li></ul>
           <a className="button button-secondary full" href={PWA_URL}>Abrir Cotidie</a>
         </article>
         <article className="install-card ios-card">
-          <div className="platform-icon apple" aria-hidden="true">●</div>
-          <img className="install-guide" src="/cotidie-web/guides/ios-safari.png" alt="Guía visual para añadir Cotidie a la pantalla de inicio desde Safari en iOS" />
+          <div className="platform-icon apple" aria-hidden="true"><img src="/cotidie-web/brand/apple.svg" alt="" /></div>
           <p className="platform">iOS · Oficial</p><h2>Usar desde Safari</h2>
           <p>En iOS, Cotidie funciona desde la web y puede añadirse a tu pantalla de inicio.</p>
           <ol><li>Abre Cotidie en Safari</li><li>Toca Compartir</li><li>Elige “Añadir a inicio”</li></ol>
