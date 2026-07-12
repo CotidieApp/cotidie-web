@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Literata";
-  src: url("/fonts/Literata-Variable.ttf") format("truetype");
+  src: url("/cotidie-web/fonts/Literata-Variable.ttf") format("truetype");
   font-style: normal;
   font-weight: 200 900;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Comfortaa";
-  src: url("/fonts/Comfortaa-Variable.ttf") format("truetype");
+  src: url("/cotidie-web/fonts/Comfortaa-Variable.ttf") format("truetype");
   font-style: normal;
   font-weight: 300 900;
   font-display: swap;

@@ -8,6 +8,39 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 16:58] 2. Repositorio independiente y publicacion con GitHub Pages
+
+**Planificacion:**
+
+- Separar tambien en GitHub el sitio web del repositorio de la aplicacion.
+- Reemplazar la direccion interna inaccesible de Sites por una URL publica real.
+- Publicar automaticamente la web tras cada cambio de la rama principal.
+
+**Ejecucion:**
+
+- **Exportacion estatica**: `next.config.ts` genera el sitio para la ruta publica `/cotidie-web`.
+- **Recursos**: icono, fuentes y tarjeta social usan el prefijo del repositorio para cargar correctamente en GitHub Pages.
+- **Automatizacion**: el workflow `pages.yml` construye y publica el sitio despues de cada push a `main`.
+- **Repositorio**: el proyecto se prepara para `CotidieApp/cotidie-web`, separado del codigo de la aplicacion Cotidie.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La exportacion estatica genero `out/index.html` con recursos preparados para la ruta publica `/cotidie-web`.
+- La publicacion quedo configurada para GitHub Pages desde GitHub Actions.
+
+**Archivos Modificados:**
+
+- `next.config.ts`
+- `package.json`
+- `package-lock.json`
+- `app/page.tsx`
+- `app/layout.tsx`
+- `app/globals.css`
+- `.github/workflows/pages.yml`
+- `tsconfig.json`
+- `AGENTS.md`
+
 ### [2026-07-12 16:21] 1. Sitio oficial de descarga y acceso a Cotidie
 
 **Planificacion:**

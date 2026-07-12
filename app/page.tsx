@@ -1,4 +1,5 @@
 const APK_URL = "#descarga-apk";
+const ASSET_PREFIX = "/cotidie-web";
 
 const features = [
   {
@@ -59,7 +60,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Cotidie, inicio">
-          <img src="/brand/icon.png" alt="" width="46" height="46" />
+          <img src={`${ASSET_PREFIX}/brand/icon.png`} alt="" width="46" height="46" />
           <span>Cotidie</span>
         </a>
         <nav aria-label="Navegación principal">
@@ -236,7 +237,7 @@ export default function Home() {
       </section>
 
       <section className="final-cta">
-        <img src="/brand/icon.png" alt="" width="72" height="72" />
+        <img src={`${ASSET_PREFIX}/brand/icon.png`} alt="" width="72" height="72" />
         <p className="section-kicker">Cotidie</p>
         <h2>Haz un lugar para lo esencial.</h2>
         <p>Tu guía diaria de oración y vida espiritual, creada para acompañarte con sencillez.</p>
@@ -244,7 +245,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand footer-brand" href="#inicio"><img src="/brand/icon.png" alt="" width="38" height="38" /><span>Cotidie</span></a>
+        <a className="brand footer-brand" href="#inicio"><img src={`${ASSET_PREFIX}/brand/icon.png`} alt="" width="38" height="38" /><span>Cotidie</span></a>
         <p>Oración y vida espiritual, todos los días.</p>
         <div><a href="#funciones">Funciones</a><a href="#instalar">Instalación</a><a href="#inicio">Volver arriba</a></div>
       </footer>
