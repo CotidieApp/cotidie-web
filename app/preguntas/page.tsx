@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
-export const metadata: Metadata = { title: "Preguntas frecuentes — Cotidie" };
+export const metadata: Metadata = { title: "Cotidie" };
 
 const faqs = [
   ["¿Qué opción conviene en Android?", "El APK ofrece la experiencia más completa. La versión web es la alternativa si prefieres no instalar archivos."],

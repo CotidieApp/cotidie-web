@@ -8,6 +8,36 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 18:27] 7. PWA conectada y titulo unificado Cotidie
+
+**Planificacion:**
+
+- Conectar las alternativas web de Android e iOS con la PWA publica existente.
+- Unificar el titulo del navegador para que todas las rutas se llamen simplemente Cotidie.
+
+**Ejecucion:**
+
+- `PWA_URL` centraliza `https://pwa-xi-jet.vercel.app` junto al enlace estable del APK.
+- La alternativa web de Android abre Cotidie directamente desde el navegador.
+- La opcion oficial de iPhone y iPad abre la misma PWA para continuar desde Safari.
+- Inicio, Funciones, Instalar y Preguntas usan el titulo `Cotidie`; Open Graph y Twitter usan el mismo nombre simple.
+
+**Validacion:**
+
+- La PWA respondio HTTP 200.
+- `npm.cmd run build:pages` OK.
+- La exportacion estatica incluyo ambos enlaces a la PWA y el titulo `Cotidie` en todas las rutas.
+- GitHub Pages publico correctamente la actualizacion.
+
+**Archivos Modificados:**
+
+- `app/lib/links.ts`
+- `app/layout.tsx`
+- `app/instalar/page.tsx`
+- `app/funciones/page.tsx`
+- `app/preguntas/page.tsx`
+- `AGENTS.md`
+
 ### [2026-07-12 18:15] 6. Descarga APK migrada a GitHub Releases
 
 **Planificacion:**

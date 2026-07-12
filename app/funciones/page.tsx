@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ScreenshotFrame } from "../components/ScreenshotFrame";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
-export const metadata: Metadata = { title: "Funciones — Cotidie" };
+export const metadata: Metadata = { title: "Cotidie" };
 
 const features = [
   ["01", "Oraciones en español y latín", "Reza en el idioma que prefieras o contempla ambas versiones en paralelo."],

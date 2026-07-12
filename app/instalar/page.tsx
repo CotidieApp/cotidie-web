@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
-import { APK_DOWNLOAD_URL } from "../lib/links";
+import { APK_DOWNLOAD_URL, PWA_URL } from "../lib/links";
 
-export const metadata: Metadata = { title: "Instalar — Cotidie" };
+export const metadata: Metadata = { title: "Cotidie" };
 
 export default function InstalarPage() {
   return (
@@ -28,14 +28,14 @@ export default function InstalarPage() {
           <p className="platform">Android · alternativa</p><h2>Usar la versión web</h2>
           <p>Accede a Cotidie sin descargar el APK ni instalar archivos en el teléfono.</p>
           <ul><li>Sin instalación local</li><li>Se abre en el navegador</li><li>Acceso rápido</li></ul>
-          <span className="button button-secondary full pending-download">Enlace web por conectar</span>
+          <a className="button button-secondary full" href={PWA_URL}>Abrir Cotidie</a>
         </article>
         <article className="install-card ios-card">
           <div className="platform-icon apple" aria-hidden="true">●</div>
           <p className="platform">iPhone y iPad · opción oficial</p><h2>Usar desde Safari</h2>
           <p>En iOS, Cotidie funciona desde la web y puede añadirse a tu pantalla de inicio.</p>
           <ol><li>Abre Cotidie en Safari</li><li>Toca Compartir</li><li>Elige “Añadir a inicio”</li></ol>
-          <span className="button button-secondary full pending-download">Enlace web por conectar</span>
+          <a className="button button-secondary full" href={PWA_URL}>Abrir Cotidie en Safari</a>
         </article>
       </section>
       <SiteFooter />
