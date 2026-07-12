@@ -15,7 +15,7 @@ export default function InstalarPage() {
       </section>
       <section className="install-grid standalone-install">
         <article className="install-card recommended" id="descarga-apk">
-          <div className="recommendation">Experiencia recomendada</div>
+          <div className="recommendation">Recomendado</div>
           <div className="platform-icon android" aria-hidden="true">A</div>
           <p className="platform">Android</p><h2>Instalar mediante APK</h2>
           <p>La aplicación completa, con acceso directo y mejor integración con tu teléfono.</p>
@@ -32,7 +32,7 @@ export default function InstalarPage() {
         </article>
         <article className="install-card ios-card">
           <div className="platform-icon apple" aria-hidden="true">●</div>
-          <p className="platform">iPhone y iPad · opción oficial</p><h2>Usar desde Safari</h2>
+          <p className="platform">iOS · Oficial</p><h2>Usar desde Safari</h2>
           <p>En iOS, Cotidie funciona desde la web y puede añadirse a tu pantalla de inicio.</p>
           <ol><li>Abre Cotidie en Safari</li><li>Toca Compartir</li><li>Elige “Añadir a inicio”</li></ol>
           <a className="button button-secondary full" href={PWA_URL}>Abrir Cotidie en Safari</a>

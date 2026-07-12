@@ -33,7 +33,7 @@ export default function Home() {
       </section>
       <section className="home-links" aria-label="Explorar Cotidie">
         <a href={`${BASE}/funciones/`}><span>01</span><strong>Funciones</strong><small>Oraciones, Plan de Vida, lecturas y audios</small></a>
-        <a href={`${BASE}/instalar/`}><span>02</span><strong>Instalación</strong><small>Android, iPhone, iPad y versión web</small></a>
+        <a href={`${BASE}/instalar/`}><span>02</span><strong>Instalación</strong><small>Android, iOS y versión web</small></a>
         <a href={`${BASE}/preguntas/`}><span>03</span><strong>Preguntas</strong><small>Respuestas antes de comenzar</small></a>
       </section>
       <SiteFooter />

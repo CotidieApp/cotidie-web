@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://cotidieapp.github.io/cotidie-web/"),
   title: "Cotidie",
-  description: "Descarga Cotidie para Android mediante APK o accede desde la web en Android, iPhone y iPad.",
+  description: "Descarga Cotidie para Android mediante APK o accede desde la web en Android e iOS.",
   icons: {
     icon: "/cotidie-web/brand/icon.png",
     apple: "/cotidie-web/brand/icon.png",

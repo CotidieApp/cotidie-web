@@ -8,6 +8,41 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 19:08] 9. Experiencia movil compacta con navegacion y carruseles
+
+**Planificacion:**
+
+- Corregir la ausencia de navegacion superior en telefonos.
+- Reducir el desplazamiento vertical sin perder contenido ni accesibilidad tactil.
+- Integrar y publicar sin alterar los cambios locales realizados por el usuario.
+
+**Ejecucion:**
+
+- **Menu movil**: la cabecera incorpora un menu desplegable tactil con Inicio, Funciones, Instalar y Preguntas.
+- **Inicio**: se compacto el hero y las tres entradas principales forman un carrusel con vista parcial de la tarjeta siguiente.
+- **Funciones**: beneficios y capturas se convierten en dos carruseles horizontales con ajuste por tarjeta.
+- **Instalacion**: APK, web Android e iOS se muestran en un carrusel horizontal, manteniendo botones de 54 px.
+- **Gestos**: los carruseles usan `scroll-snap`, contienen el desplazamiento y conservan una barra discreta como indicacion visual.
+- **Cambios preservados**: se mantuvieron las ediciones locales del usuario en Inicio, metadata, Instalacion y Preguntas frecuentes.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- Prueba publicada a 390 x 844 px sin desborde horizontal.
+- Inicio, Funciones e Instalar redujeron sustancialmente su altura movil y mantuvieron controles tactiles adecuados.
+- El menu movil mostro las cuatro rutas y marco la pagina activa.
+- GitHub Pages publico correctamente la actualizacion.
+
+**Archivos Modificados:**
+
+- `app/components/SiteChrome.tsx`
+- `app/globals.css`
+- `app/page.tsx`
+- `app/layout.tsx`
+- `app/instalar/page.tsx`
+- `app/preguntas/page.tsx`
+- `AGENTS.md`
+
 ### [2026-07-12 18:49] 8. Publicacion de capturas y renovacion automatica de cache
 
 **Planificacion:**

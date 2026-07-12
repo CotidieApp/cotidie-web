@@ -23,6 +23,17 @@ export function SiteHeader({ active }: { active: ActivePage }) {
           <a className={active === link.key ? "active" : ""} href={link.href} key={link.key}>{link.label}</a>
         ))}
       </nav>
+      <details className="mobile-menu">
+        <summary aria-label="Abrir menú de navegación">
+          <span className="menu-label">Menú</span>
+          <span className="menu-bars" aria-hidden="true"><i /><i /><i /></span>
+        </summary>
+        <div className="mobile-menu-panel">
+          {links.map((link) => (
+            <a className={active === link.key ? "active" : ""} href={link.href} key={link.key}>{link.label}</a>
+          ))}
+        </div>
+      </details>
       <a className="header-action" href={APK_DOWNLOAD_URL}>Descargar para Android</a>
     </header>
   );

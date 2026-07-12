@@ -5,10 +5,10 @@ export const metadata: Metadata = { title: "Cotidie" };
 
 const faqs = [
   ["¿Qué opción conviene en Android?", "El APK ofrece la experiencia más completa. La versión web es la alternativa si prefieres no instalar archivos."],
-  ["¿Cómo se usa Cotidie en iPhone o iPad?", "Desde Safari. Puedes añadirla a la pantalla de inicio desde el menú Compartir para abrirla como una aplicación."],
+  ["¿Cómo se usa Cotidie en mi iPhone?", "Desde Safari. Puedes añadirla a la pantalla de inicio desde el menú Compartir para abrirla como una aplicación."],
   ["¿El APK es el archivo oficial?", "Sí. El botón de descarga de esta web utilizará siempre la compilación oficial más reciente de Cotidie."],
-  ["¿Cotidie tiene publicidad?", "No. Cotidie está pensada como una ayuda serena para la oración, sin anuncios ni interrupciones comerciales."],
-  ["¿Puedo usarla sin conexión?", "La aplicación Android conserva sin conexión las funciones y contenidos incluidos localmente. Algunas funciones web pueden requerir internet."],
+  ["¿Cotidie tiene publicidad?", "Al ser una aplicación de rezo, no sería apropiado incluir publicidad. Cotidie no tiene anuncios ni rastreadores de terceros. Funciona completamente sin conexión a Internet, salvo para descargar actualizaciones de contenido."],
+  ["¿Puedo usarla sin conexión?", "La aplicación Android conserva sin conexión las funciones y contenidos incluidos localmente. La versión web requiere conexión a Internet para acceder a los contenidos."],
 ];
 
 export default function PreguntasPage() {
