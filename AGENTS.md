@@ -8,6 +8,37 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 18:49] 8. Publicacion de capturas y renovacion automatica de cache
+
+**Planificacion:**
+
+- Publicar las capturas reemplazadas por el usuario.
+- Evitar que el navegador siga mostrando versiones antiguas con el mismo nombre de archivo.
+- Preservar otros cambios locales ajenos a esta publicacion.
+
+**Ejecucion:**
+
+- Se publicaron las nuevas capturas `inicio.png`, `oraciones.png` y `plan-de-vida.png`.
+- Cada imagen incluye ahora la identificacion del despliegue en su URL, manteniendo el nombre simple del archivo en la carpeta.
+- GitHub Actions inyecta el SHA de cada publicacion como version; el navegador solicita nuevamente las capturas despues de cada despliegue.
+- `biblioteca.png` se mantuvo sin cambios porque conserva el placeholder anterior.
+
+**Validacion:**
+
+- Las tres capturas nuevas se reconocieron como PNG validos de 720 x 1612 px.
+- `npm.cmd run build:pages` OK.
+- La exportacion estatica incluyo el parametro de renovacion en las URLs de capturas.
+- GitHub Pages publico correctamente la actualizacion y sirvio los nuevos archivos.
+
+**Archivos Modificados:**
+
+- `public/screenshots/inicio.png`
+- `public/screenshots/oraciones.png`
+- `public/screenshots/plan-de-vida.png`
+- `app/components/ScreenshotFrame.tsx`
+- `.github/workflows/pages.yml`
+- `AGENTS.md`
+
 ### [2026-07-12 18:27] 7. PWA conectada y titulo unificado Cotidie
 
 **Planificacion:**
