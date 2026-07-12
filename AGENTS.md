@@ -8,6 +8,31 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 19:55] 14. Compatibilidad con el antiguo enlace Guía
+
+**Planificacion:**
+
+- Mantener eliminada la pagina y el enlace visible `Guía`.
+- Evitar un error 404 si un navegador conserva temporalmente el menu publicado antes de la consolidacion.
+
+**Ejecucion:**
+
+- Se confirmo que la navegacion publica actual solo muestra Instalar y no contiene enlace visible a Guía.
+- Se agrego una redireccion tecnica, sin contenido ni interfaz, desde la antigua ruta `/guia/` hacia `/instalar/`.
+- La redireccion permite que enlaces guardados o menus en caché lleguen a la unica pagina vigente de instalacion.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La exportacion principal no genera una pagina de Guía y la pagina Instalar no contiene enlace visible a ella.
+- El archivo tecnico de la antigua ruta redirige a `/instalar/` sin contenido de la pagina retirada.
+- `git diff --check` OK; solo se mostraron los avisos esperados de finales de linea CRLF de Windows.
+
+**Archivos Modificados:**
+
+- `public/guia/index.html`
+- `AGENTS.md`
+
 ### [2026-07-12 19:45] 13. Una sola pagina de instalacion
 
 **Planificacion:**
