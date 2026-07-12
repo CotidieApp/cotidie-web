@@ -8,6 +8,34 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 19:30] 10. Guias visuales para los tres accesos de Cotidie
+
+**Planificacion:**
+
+- Incorporar una guia visual concreta dentro de cada metodo de acceso, sin reemplazar las instrucciones escritas existentes.
+- Mantener el lenguaje visual calido, azul marino y dorado de Cotidie, y la navegacion movil horizontal ya implementada.
+
+**Ejecucion:**
+
+- Se crearon tres ilustraciones originales: descarga e instalacion APK en Android, acceso web en Android y anadir Cotidie desde Safari en iOS.
+- La pagina `instalar` ahora muestra la ilustracion correspondiente debajo del icono de cada plataforma, con texto alternativo descriptivo para accesibilidad.
+- Se incorporo un marco visual uniforme y un recorte centrado para que las guias conserven proporciones profesionales tanto en escritorio como en movil.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La pagina estatica de instalacion referencia las tres guias y la exportacion genero los tres PNG en `out/guides`.
+- `git diff --check` OK; solo se mostraron los avisos esperados de finales de linea CRLF de Windows.
+
+**Archivos Modificados:**
+
+- `app/instalar/page.tsx`
+- `app/globals.css`
+- `public/guides/android-apk-install.png`
+- `public/guides/android-web.png`
+- `public/guides/ios-safari.png`
+- `AGENTS.md`
+
 ### [2026-07-12 19:08] 9. Experiencia movil compacta con navegacion y carruseles
 
 **Planificacion:**
