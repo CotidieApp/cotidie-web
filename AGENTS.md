@@ -8,6 +8,34 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 19:45] 13. Una sola pagina de instalacion
+
+**Planificacion:**
+
+- Eliminar la duplicidad entre la pagina breve de instalacion y la guia detallada.
+- Conservar la guia como la unica experiencia de instalacion bajo la ruta y el nombre `Instalar`.
+
+**Ejecucion:**
+
+- `Instalar` adopta el contenido completo de la guia: APK, acceso web Android, Safari en iOS y versionado.
+- Se retiro la ruta `Guía` y su enlace desde la navegacion y el pie.
+- Se actualizaron los estados de navegacion y los nombres visibles para conservar solo Inicio, Funciones, Instalar y Preguntas.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La exportacion contiene `/instalar/` y ya no genera la ruta `/guia/`.
+- La pagina Instalar conserva APK, PWA Android, Safari en iOS y el detalle Major/Minor/Patch.
+- No existen referencias a `/guia/` en el codigo ni en la exportacion estatica.
+- `git diff --check` OK; solo se mostraron los avisos esperados de finales de linea CRLF de Windows.
+
+**Archivos Modificados:**
+
+- `app/instalar/page.tsx`
+- `app/guia/page.tsx` (eliminado)
+- `app/components/SiteChrome.tsx`
+- `AGENTS.md`
+
 ### [2026-07-12 19:40] 12. Guia de instalacion y actualizaciones
 
 **Planificacion:**
