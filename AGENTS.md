@@ -8,6 +8,30 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 20:06] 15. Publicacion de la captura Biblioteca
+
+**Planificacion:**
+
+- Publicar exclusivamente la captura actualizada de Biblioteca.
+- Preservar sin incluir la edicion local independiente existente en la pagina Instalar.
+
+**Ejecucion:**
+
+- Se incorporo la imagen actualizada `biblioteca.png` en la publicacion estatica.
+- No se modifico ni se preparo para publicar `app/instalar/page.tsx`.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La ruta Funciones de la exportacion referencia `screenshots/biblioteca.png` y el archivo exportado coincide en tamano con la imagen actualizada.
+- `git status` confirma que `app/instalar/page.tsx` sigue como cambio local separado y no sera incluido en el commit.
+- `git diff --check` OK; solo se mostraron los avisos esperados de finales de linea CRLF de Windows.
+
+**Archivos Modificados:**
+
+- `public/screenshots/biblioteca.png`
+- `AGENTS.md`
+
 ### [2026-07-12 19:55] 14. Compatibilidad con el antiguo enlace Guía
 
 **Planificacion:**
