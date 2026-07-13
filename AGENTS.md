@@ -8,6 +8,31 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - Cada reporte debe incluir `Planificacion`, `Ejecucion`, `Validacion` y `Archivos Modificados`.
 - Este proyecto es independiente del repositorio de la aplicacion Cotidie.
 
+### [2026-07-12 20:14] 16. Nota de idioma completa en el inicio
+
+**Planificacion:**
+
+- Corregir el recorte lateral de la nota flotante `Español y latín` en el hero de Inicio.
+- Conservar el recorte decorativo de las demas vistas y evitar crear desplazamiento horizontal.
+
+**Ejecucion:**
+
+- El hero de Inicio permite que sus notas flotantes ocupen el margen disponible fuera de su contenedor interno.
+- El documento bloquea el desbordamiento horizontal a nivel de viewport, preservando el recorte de los elementos que realmente superen la pantalla.
+- La nota de idioma ya no queda cortada por el limite derecho del contenedor del hero.
+
+**Validacion:**
+
+- `npm.cmd run build:pages` OK.
+- La exportacion de Inicio conserva el hero y la nota de idioma con las reglas de desborde actualizadas.
+- `git diff --check` OK; solo se mostraron los avisos esperados de finales de linea CRLF de Windows.
+- La modificacion local independiente de `app/instalar/page.tsx` permanece fuera de esta publicacion.
+
+**Archivos Modificados:**
+
+- `app/globals.css`
+- `AGENTS.md`
+
 ### [2026-07-12 20:06] 15. Publicacion de la captura Biblioteca
 
 **Planificacion:**
