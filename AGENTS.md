@@ -497,3 +497,23 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 **Validacion:** GitHub confirmo el asset de la release v1.1.5. La compilacion con Next.js y Webpack, TypeScript y la comprobacion del HTML exportado fueron correctas. Turbopack no admitio el enlace a las dependencias de la copia aislada.
 
 **Archivos Modificados:** `app/instalar/page.tsx`, `app/lib/links.ts`, `AGENTS.md`.
+
+### [2026-10-26] Traslado a Documentos\Proyectos
+
+**Planificacion:** Reubicar conservando el repositorio y la modificacion local de `app/instalar/page.tsx`.
+
+**Ejecucion:** Nueva raiz `C:\Users\balca\Documents\Proyectos\Cotidie Web`; referencias de CAPTURAS y screenshots actualizadas. Cache `.vinext` anterior conservada fuera de Documentos y salida regenerada. No se modifico el codigo funcional ni se publico.
+
+**Validacion:** Estado Git preservado al mover. Build correcto con Node administrado v24.22.1 y `node node_modules/vinext/dist/cli.js build`; el Node global v24.19.0 termino inicialmente con una asercion libuv al cerrar, despues de generar la salida. Las cuatro rutas `/cotidie-web/`, `funciones/`, `instalar/` y `preguntas/` devolvieron HTTP 200 y HTML de Cotidie desde el worker generado. Se respetaron basePath y trailingSlash existentes.
+
+**Archivos Modificados:** `CAPTURAS.md`, `public/screenshots/README.md`, `AGENTS.md`; ubicacion del arbol completo. Evidencia y runtime usados en `.codex/projects/mejoras-operativas/migration-20261026`.
+
+### [2026-11-01] Publicacion de cambios locales anteriores
+
+**Planificacion:** Publicar los cambios pendientes conservados al trasladar el proyecto y sincronizar la copia local.
+
+**Ejecucion:** Se incorporaron las referencias a la ubicacion actual del proyecto y los ajustes de texto de iOS previamente pendientes.
+
+**Validacion:** Se revisaron los cambios aislados respecto de la version publicada.
+
+**Archivos Modificados:** `app/instalar/page.tsx`, `CAPTURAS.md`, `public/screenshots/README.md`, `AGENTS.md`.

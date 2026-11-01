@@ -2,7 +2,7 @@
 
 La carpeta que debes abrir en el Explorador de Windows es:
 
-`C:\Users\balca\Documents\Cotidie Web\public\screenshots`
+`C:\Users\balca\Documents\Proyectos\Cotidie Web\public\screenshots`
 
 Dentro encontraras cuatro imagenes. Reemplaza cada archivo por tu captura manteniendo exactamente el mismo nombre:
 

@@ -18,7 +18,7 @@ export default function InstalarPage() {
         <div className="guide-section-heading">
           <p className="section-kicker">Elige tu acceso</p>
           <h2 id="installation-title">Tres formas de tener Cotidie cerca.</h2>
-          <p>El APK es la experiencia principal en Android. La versión web permite usar Cotidie sin instalar un archivo y es la opción oficial en iPhone y iPad.</p>
+          <p>El APK es la experiencia principal en Android. La versión web permite usar Cotidie sin instalar un archivo y es la opción oficial para iOS.</p>
         </div>
         <div className="guide-methods">
           <article className="guide-method recommended">
@@ -48,7 +48,7 @@ export default function InstalarPage() {
           </article>
           <article className="guide-method">
             <div className="platform-icon apple" aria-hidden="true"><img src="/cotidie-web/brand/apple.svg" alt="" /></div>
-            <p className="platform">iPhone y iPad · Safari</p>
+            <p className="platform">iOS · Safari</p>
             <h2>La opción oficial en iOS</h2>
             <ol>
               <li>Abre Cotidie con Safari.</li>
