@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
-import { APK_DOWNLOAD_URL, PWA_URL } from "../lib/links";
+import { APK_DOWNLOAD_URL, NOVUM_APK_DOWNLOAD_URL, PWA_URL } from "../lib/links";
 
 export const metadata: Metadata = { title: "Cotidie" };
 
@@ -58,6 +58,23 @@ export default function InstalarPage() {
             </ol>
             <a className="button button-secondary full" href={PWA_URL}>Abrir en Safari</a>
           </article>
+        </div>
+      </section>
+
+      <section className="version-section" aria-labelledby="novum-title">
+        <div className="guide-section-heading">
+          <p className="section-kicker">Actualizaciones en Android</p>
+          <h2 id="novum-title">Mantén Cotidie al día con Cotidie Novum.</h2>
+          <p>Cotidie Novum es una aplicación complementaria que busca actualizaciones de Cotidie y de sí misma. Android puede pedirte que confirmes su instalación.</p>
+        </div>
+        <div className="update-notice">
+          <span aria-hidden="true">!</span>
+          <div>
+            <h2>Antes de instalar Novum</h2>
+            <p>Novum solo sirve para Cotidie instalada desde el APK oficial; no actualiza la versión web. Instala primero Cotidie, luego descarga y abre Novum. Otorga todos los permisos que solicite, incluidos los de instalación de aplicaciones y notificaciones cuando correspondan, para que funcione correctamente.</p>
+            <p>Las comprobaciones automáticas requieren conexión y Android puede aplazarlas según el estado del dispositivo.</p>
+            <a className="button button-primary" href={NOVUM_APK_DOWNLOAD_URL}>Descargar Cotidie Novum</a>
+          </div>
         </div>
       </section>
 

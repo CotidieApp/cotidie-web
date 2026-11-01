@@ -487,3 +487,13 @@ Historial de intervenciones del asistente en el sitio web oficial de Cotidie.
 - `.gitignore`
 - `.openai/hosting.json`
 - `AGENTS.md`
+
+### [2026-11-01] Descarga de Cotidie Novum
+
+**Planificacion:** Ofrecer el actualizador a quienes usan el APK oficial de Cotidie.
+
+**Ejecucion:** Se agrego una seccion con requisitos y permisos, y un enlace al APK estable de la ultima release de Novum.
+
+**Validacion:** GitHub confirmo el asset de la release v1.1.5. La compilacion con Next.js y Webpack, TypeScript y la comprobacion del HTML exportado fueron correctas. Turbopack no admitio el enlace a las dependencias de la copia aislada.
+
+**Archivos Modificados:** `app/instalar/page.tsx`, `app/lib/links.ts`, `AGENTS.md`.
